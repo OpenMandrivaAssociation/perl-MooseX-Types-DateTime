@@ -1,15 +1,16 @@
 %define upstream_name    MooseX-Types-DateTime
-%define upstream_version 0.08
+%define upstream_version 0.10
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	L<DateTime> related constraints and coercions for
+
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/MooseX/MooseX-Types-DateTime-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(DateTime)
@@ -56,4 +57,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Sat Jan 09 2010 cpan2dist 0.05-1mdv
 - initial mdv release, generated with cpan2dist
+
 
