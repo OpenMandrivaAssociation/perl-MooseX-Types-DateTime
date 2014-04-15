@@ -1,5 +1,4 @@
-%define upstream_name    MooseX-Types-DateTime
-%define upstream_version 0.10
+%define upstream_name    MooseX-Types-DateTime%define upstream_version 0.10
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -13,7 +12,6 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRequires: perl(namespace::autoclean)
 BuildRequires: perl(Test::Fatal)
 BuildRequires:	perl(DateTime)
 BuildRequires:	perl(DateTime::Locale)
@@ -23,6 +21,7 @@ BuildRequires:	perl(MooseX::Types)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(Test::use::ok)
 BuildRequires:	perl(namespace::clean)
+BuildRequires:  perl(namespace::autoclean)
 BuildArch:	noarch
 
 %description
@@ -46,18 +45,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.50.0-2mdv2011.0
-+ Revision: 654261
-- rebuild for updated spec-helper
-
-* Sat Jan 09 2010 Jérôme Quelin <jquelin@mandriva.org> 0.50.0-1mdv2011.0
-+ Revision: 488019
-- import perl-MooseX-Types-DateTime
-
-
-* Sat Jan 09 2010 cpan2dist 0.05-1mdv
-- initial mdv release, generated with cpan2dist
-
 
